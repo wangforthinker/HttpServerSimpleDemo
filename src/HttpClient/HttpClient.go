@@ -6,7 +6,6 @@ import "fmt"
 //import "strings"
 import "io/ioutil"
 
-
 func main() {
 	args := os.Args
 	if len(args) < 2 {
@@ -18,7 +17,7 @@ func main() {
 	
 	url := args[1]+"?data="+ body
 	fmt.Println("url:",url)
-	resp, err := http.Get(url)
+	resp, err := http.Get(url) //url needs http://
 	
 	
 	if err != nil {
